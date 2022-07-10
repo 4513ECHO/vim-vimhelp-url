@@ -27,6 +27,7 @@ function! s:urlencode_char(char) abort
   return result
 endfunction
 
+" Escape reversed/unsafe chars in URL
 function! vimhelp_url#escape(string)
   return substitute(a:string,
         \ '[&$+,/:;=?@# <>[\]{}|\\^%"'']',

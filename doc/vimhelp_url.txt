@@ -1,0 +1,75 @@
+*vimhelp_url.txt*			Create URL of vim help documentation
+
+Author: Hibiki <4513echo@gmail.com>
+License: MIT License
+URL: https://github.com/4513ECHO/vim-vimhelp_url
+Last change: 2022 Jul 10
+
+==============================================================================
+CONTENTS					*vimhelp_url-contents*
+
+Introduction					|vimhelp_url-introduction|
+Interface					|vimhelp_url-interface|
+  Commands					|vimhelp_url-commands|
+  Functions					|vimhelp_url-functions|
+  Key Mappings					|vimhelp_url-key-mappings|
+  Variables					|vimhelp_url-variables|
+About						|vimhelp_url-about|
+
+==============================================================================
+INTRODUCTION					*vimhelp_url-introduction*
+
+*vimhelp-url* or *vim-vimhelp-url* create URL of vim help documentation.
+
+==============================================================================
+INTERFACE					*vimhelp_url-interface*
+
+------------------------------------------------------------------------------
+COMMANDS					*vimhelp_url-commands*
+
+:HelpUrl[!] {subject}				*:HelpUrl*
+	Create and echo the URL of {subject}. If bang exists, the command will
+	yank the URL to |v:register|.
+
+------------------------------------------------------------------------------
+FUNCTIONS					*vimhelp_url-functions*
+
+vimhelp_url#create({subject}, {options})	*vimhelp_url#create()*
+	A function version of |:HelpUrl|. {options} is |Dictionary|, following
+	keys are available:
+
+	key	description~
+	"yank"	if it is |v:true|, the function will yank the URL to
+		|v:register|. (default: |v:false|)
+
+------------------------------------------------------------------------------
+KEY MAPPINGS					*vimhelp_url-key-mappings*
+
+<Plug>(vimhelp_url)				*<Plug>(vimhelp_url)*
+	Create and echo the URL of current |word|.
+	This is normally same as |:HelpUrl| without bang.
+	This also works in |visual-mode| like |v_K|.
+
+["x]<Plug>(vimhelp_url-yank)			*<Plug>(vimhelp_url-yank)*
+	Create, echo and yank [into register x] the URL of current |word|.
+	This is normally same as |:HelpUrl| with bang.
+	This also works in |visual-mode| like |v_K|.
+
+------------------------------------------------------------------------------
+VARIABLES					*vimhelp_url-variables*
+
+g:vimhelp_url_japanese				*g:vimhelp_url_japanese*
+		|Boolean| (default: |v:false|)
+	If this is |v:true|, the plugin will return URL which contents is
+	translated into Japanese.
+
+==============================================================================
+ABOUT						*vimhelp_url-about*
+
+|vimhelp-url| is developed by Hibiki(4513ECHO) and licensed under the
+MIT License. Visit the project page for the latest version:
+
+	https://github.com/4513ECHO/vim-vimhelp_url
+
+==============================================================================
+vim:tw=78:ts=8:ft=help:norl:noet:fen:
