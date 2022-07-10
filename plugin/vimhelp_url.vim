@@ -17,7 +17,6 @@ nnoremap <Plug>(vimhelp_url-yank) <Cmd>echo vimhelp_url#create(expand('<cword>')
 xnoremap <Plug>(vimhelp_url-yank) <Cmd>echo vimhelp_url#create(<SID>get_selected(), {'yank': v:true})<CR>
 
 function! s:get_selected() abort
-  if mode() ==# 'v'
   let [col1, col2] = [col('.') - 1 , col('v') - 1]
   return col1 >= col2
         \ ? getline('.')[col2:col1]
