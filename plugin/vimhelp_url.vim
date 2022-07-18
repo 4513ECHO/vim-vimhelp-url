@@ -6,7 +6,7 @@ let g:loaded_vimhelp_url = v:true
 let s:save_cpo = &cpo
 set cpo&vim
 
-let g:vimhelp_url_japanese = get(g:, 'vimhelp_url_japanese', v:false)
+let g:vimhelp_url_japanese = get(g:, 'vimhelp_url_japanese', &helplang =~# 'ja')
 
 command! -bang -bar -nargs=? -complete=help HelpUrl
       \ echomsg vimhelp_url#create(<q-args>, {'yank': <bang>0})
