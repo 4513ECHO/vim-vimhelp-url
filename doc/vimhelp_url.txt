@@ -6,18 +6,18 @@ URL: https://github.com/4513ECHO/vim-vimhelp_url
 Last change: 2023 Jul 30
 
 ==============================================================================
-CONTENTS                                                *vimhelp_url-contents*
+CONTENTS                                                *vimhelp-url-contents*
 
-Introduction					|vimhelp_url-introduction|
-Interface					|vimhelp_url-interface|
-  Commands					|vimhelp_url-commands|
-  Functions					|vimhelp_url-functions|
-  Key Mappings					|vimhelp_url-key-mappings|
-  Variables					|vimhelp_url-variables|
-About						|vimhelp_url-about|
+Introduction					|vimhelp-url-introduction|
+Interface					|vimhelp-url-interface|
+  Commands					|vimhelp-url-commands|
+  Functions					|vimhelp-url-functions|
+  Key Mappings					|vimhelp-url-key-mappings|
+  Variables					|vimhelp-url-variables|
+About						|vimhelp-url-about|
 
 ==============================================================================
-INTRODUCTION                                        *vimhelp_url-introduction*
+INTRODUCTION                                        *vimhelp-url-introduction*
 
 *vimhelp-url* ( *vim-vimhelp-url* ) is a plugin to create a URL of vim help
 documentation.
@@ -25,10 +25,10 @@ documentation.
 Vim v9.0.0000+ or Neovim v0.8.0+ is required.
 
 ==============================================================================
-INTERFACE                                              *vimhelp_url-interface*
+INTERFACE                                              *vimhelp-url-interface*
 
 ------------------------------------------------------------------------------
-COMMANDS                                                *vimhelp_url-commands*
+COMMANDS                                                *vimhelp-url-commands*
 
 :HelpUrl[!] {subject}                                               *:HelpUrl*
 	Echo the URL linked to {subject}.
@@ -39,7 +39,7 @@ COMMANDS                                                *vimhelp_url-commands*
 		" -> https://vim-jp.org/vimdoc-en/helphelp.html#%3Ahelp
 
 ------------------------------------------------------------------------------
-FUNCTIONS                                              *vimhelp_url-functions*
+FUNCTIONS                                              *vimhelp-url-functions*
 
 vimhelp_url#create({subject} [, {options}])             *vimhelp_url#create()*
 	Return the URL linked to {subject}.
@@ -50,7 +50,7 @@ vimhelp_url#create({subject} [, {options}])             *vimhelp_url#create()*
 		|v:register|. (default: |v:false|)
 
 ------------------------------------------------------------------------------
-KEY MAPPINGS                                        *vimhelp_url-key-mappings*
+KEY MAPPINGS                                        *vimhelp-url-key-mappings*
 
 <Plug>(vimhelp_url)                                      *<Plug>(vimhelp_url)*
 	Echo the URL linked to current |word|.
@@ -63,7 +63,7 @@ KEY MAPPINGS                                        *vimhelp_url-key-mappings*
 	This also works in |visual-mode| like |v_K|.
 
 ------------------------------------------------------------------------------
-VARIABLES                                              *vimhelp_url-variables*
+VARIABLES                                              *vimhelp-url-variables*
 
 g:vimhelp_url_japanese                                *g:vimhelp_url_japanese*
 		|Boolean| (default: whether 'helplang' includes "`ja`")
@@ -71,7 +71,7 @@ g:vimhelp_url_japanese                                *g:vimhelp_url_japanese*
 	translated into Japanese.
 
 ==============================================================================
-ABOUT                                                      *vimhelp_url-about*
+ABOUT                                                      *vimhelp-url-about*
 
 |vimhelp-url| is developed by Hibiki(4513ECHO) and licensed under the MIT
 License. Visit the project page for the latest version:
